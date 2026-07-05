@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Gustoso | Classic Italian Restaurant & Bistro</title>
+    <meta name="description" content="Welcome to Gustoso. Offering authentic Italian specialties, fresh handmade pasta, catering kits, elegant banquets, and table reservations.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gustoso-bistro.online/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Gustoso | Italian Specialties, Good Food & Wine">
+    <meta property="og:description" content="Experience authentic culinary mastery. Book your table online, plan custom catering with our Menu Kit, or host events in our banquet hall.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/menu-item-1.jpg">
+    
+    <!-- Google Fonts: Berkshire Swash (Cursive headings), Playfair Display (Luxury serif), Raleway (Elegant body), Yesteryear (Handwriting accent) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Raleway:wght@300;400;500;600;700&family=Yesteryear&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="#home" class="logo-link nav-trigger" data-target="home" id="brand-logo">
+                <span class="logo-text">Gustoso</span>
+            </a>
+            
+            <nav class="desktop-navbar" aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active nav-trigger" data-target="home" id="nav-item-home">Home</a></li>
+                    <li><a href="#about" class="nav-link nav-trigger" data-target="about" id="nav-item-about">About Us</a></li>
+                    <li><a href="#menu" class="nav-link nav-trigger" data-target="menu" id="nav-item-menu">Menu</a></li>
+                    <li><a href="#banquet" class="nav-link nav-trigger" data-target="banquet" id="nav-item-banquet">Banquet Facility</a></li>
+                    <li><a href="#gallery" class="nav-link nav-trigger" data-target="gallery" id="nav-item-gallery">Gallery</a></li>
+                    <li><a href="#catering" class="nav-link nav-trigger" data-target="catering" id="nav-item-catering">Catering</a></li>
+                    <li><a href="#contact" class="nav-link nav-trigger" data-target="contact" id="nav-item-contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="btn btn-primary trigger-booking" id="header-booking-btn">Reservation</button>
+                <button class="mobile-menu-btn" id="mobile-hamburger" aria-label="Toggle mobile menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer Overlay -->
+    <div class="mobile-drawer" id="mobile-menu-drawer">
+        <button class="mobile-drawer-close" id="mobile-drawer-close-btn" aria-label="Close menu">&times;</button>
+        <ul class="mobile-nav-menu">
+            <li><a href="#home" class="mobile-nav-link nav-trigger" data-target="home" id="mob-item-home">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link nav-trigger" data-target="about" id="mob-item-about">About Us</a></li>
+            <li><a href="#menu" class="mobile-nav-link nav-trigger" data-target="menu" id="mob-item-menu">Menu</a></li>
+            <li><a href="#banquet" class="mobile-nav-link nav-trigger" data-target="banquet" id="mob-item-banquet">Banquet Facility</a></li>
+            <li><a href="#gallery" class="mobile-nav-link nav-trigger" data-target="gallery" id="mob-item-gallery">Gallery</a></li>
+            <li><a href="#catering" class="mobile-nav-link nav-trigger" data-target="catering" id="mob-item-catering">Catering</a></li>
+            <li><a href="#contact" class="mobile-nav-link nav-trigger" data-target="contact" id="mob-item-contact">Contact Us</a></li>
+        </ul>
+        <div class="mobile-drawer-footer">
+            <button class="btn btn-primary trigger-booking w-full" id="mob-booking-btn">Reservation</button>
+        </div>
+    </div>
+    <div class="drawer-overlay" id="mobile-drawer-overlay"></div>
+
+    <!-- Main Content Container (SPA Sections) -->
+    <main id="main-content">
+        
+        <!-- ================= HOME SECTION ================= -->
+        <section id="home" class="page-section active">
+            <!-- Hero banner Section with fixed background parallax -->
+            <div class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('assets/hero-bg.jpg');">
+                <div class="hero-content">
+                    <span class="hero-cursive-brand">Gustoso</span>
+                    <h1 class="hero-title">Italian Specialities</h1>
+                    <span class="hero-subheading-tagline">Good Food | Good wine</span>
+                    <div class="hero-buttons">
+                        <a href="#about" class="btn btn-primary nav-trigger" data-target="about" id="hero-more-btn">More About Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Realigned Welcome Story & Dual Visual Cards Section -->
+            <div class="home-story-wrapper">
+                <!-- Faint Leaves background watermark -->
+                <img src="assets/parcelli.png" alt="Decor Leaf" class="welcome-bg-leaves">
+                
+                <div class="section-container home-story">
+                    <div class="grid grid-2 align-items-center">
+                        <div class="story-text">
+                            <span class="welcome-top-tagline">Country's Most Loved!</span>
+                            <h2 class="welcome-main-title font-cursive">Welcome</h2>
+                            <h3 class="welcome-sub-heading font-serif">We Are Locally Crafted Food & Wine Serving Since 1978</h3>
+                            <p class="paragraph-lead">Congue, gravida. Placeat nibh sunt semper elementum anim! Integer lectus debitis auctor. Molestias vivamus eligendi ut, cupidatat nisl iaculis etiam! Laboris aenean.</p>
+                            <p class="story-desc">Our kitchen remains deeply rooted in Mediterranean cooking traditions. From hand-pressed organic olive oils to fresh pasta prepared hourly, Gustoso is a celebration of quality ingredients and heartfelt hospitality.</p>
+                            <a href="#about" class="btn btn-primary nav-trigger welcome-cta-btn" data-target="about" id="story-about-btn-new">More About Us <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        
+                        <!-- Dual Card Column on Right -->
+                        <div class="welcome-visual-grid">
+                            <!-- Card 1: Pizza Pull -->
+                            <div class="visual-card img-only-card shadow-md rounded-lg">
+                                <img src="assets/pizza-pull.jpg" alt="Chef Fresh Pizza Pull" class="visual-card-img">
+                            </div>
+                            
+                            <!-- Card 2: Dining & Hours Overlay -->
+                            <div class="visual-card hours-card shadow-md rounded-lg">
+                                <img src="assets/gallery-atmosphere-1.jpg" alt="Dining atmosphere" class="visual-card-img">
+                                <div class="visual-hours-overlay text-center">
+                                    <h4 class="hours-overlay-title font-cursive text-orange">Hours</h4>
+                                    <p class="hours-overlay-days text-white font-bold">Monday – Saturday</p>
+                                    <p class="hours-overlay-time text-cream">9am – 10pm</p>
+                                    <p class="hours-overlay-days text-white font-bold margin-top-sm">Sunday</p>
+                                    <p class="hours-overlay-time text-cream">11am – 8pm</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parallax Middle Promo Banner -->
+            <div class="parallax-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('assets/prepare-dish-bg.jpg');">
+                <div class="parallax-content">
+                    <span class="accent-subtitle text-orange">Wednesdays Means</span>
+                    <h2 class="section-heading text-white">Happy Hours!</h2>
+                    <p class="text-cream max-w-600 margin-center">Gather your friends and enjoy 20% off all selected vintage Italian wines and shared platters from 4:00 PM to 7:00 PM every Wednesday.</p>
+                    <a href="#menu" class="btn btn-primary nav-trigger" data-target="menu" id="parallax-view-menu">View Special Offers</a>
+                </div>
+            </div>
+
+            <!-- HOME PAGE MENU HIGHLIGHTS (Quality Ingredients, Tasty Meals - Checkerboard Grid Layout) -->
+            <div class="home-menu-highlights-wrapper">
+                <!-- Floating leaves vectors in background -->
+                <img src="assets/parcelli.png" alt="Decor Leaf" class="bg-leaves-left">
+                <img src="assets/parcelli.png" alt="Decor Leaf" class="bg-leaves-right">
+                
+                <div class="section-container home-menu-highlights">
+                    <div class="container-header text-center">
+                        <img src="assets/parcelli.png" alt="Decor Leaf" class="menu-section-leaf-decor">
+                        <span class="accent-subtitle">Our Menu</span>
+                        <h2 class="section-heading">Quality Ingredients, Tasty Meals</h2>
+                        <img src="assets/frill-divider.png" alt="Divider Decor" class="divider-decor margin-center">
+                        <p class="section-subtext">A few selected culinary masterpieces served fresh daily from our stone ovens.</p>
+                    </div>
+                    
+                    <div class="menu-checkerboard-grid">
+                        <!-- Card 1: Text -->
+                        <div class="menu-check-card text-card">
+                            <div class="check-card-content">
+                                <span class="accent-label">Classic Starter</span>
+                                <h3 class="highlight-item-title font-serif">Ham and Fontina</h3>
+                                <div class="highlight-item-dots-decor"></div>
+                                <span class="highlight-item-price font-serif">$29.50</span>
+                                <p class="highlight-item-desc">Roasted cured ham, creamy fontina cheese, fresh arugula, baked on house-fermented dough.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2: Image -->
+                        <div class="menu-check-card img-card">
+                            <img src="assets/menu-item-2.jpg" alt="Ham and Fontina Appetizer" loading="lazy">
+                        </div>
+                        <!-- Card 3: Text -->
+                        <div class="menu-check-card text-card">
+                            <div class="check-card-content">
+                                <span class="accent-label">Bistro Classic</span>
+                                <h3 class="highlight-item-title font-serif">Chicken Italiano</h3>
+                                <div class="highlight-item-dots-decor"></div>
+                                <span class="highlight-item-price font-serif">$11.00</span>
+                                <p class="highlight-item-desc">Pan-seared organic chicken breast wrapped in prosciutto, fresh sage, and dry white wine reduction.</p>
+                            </div>
+                        </div>
+                        <!-- Card 4: Image -->
+                        <div class="menu-check-card img-card">
+                            <img src="assets/menu-item-3.jpg" alt="Heritage Caprese Salad" loading="lazy">
+                        </div>
+                        <!-- Card 5: Text -->
+                        <div class="menu-check-card text-card">
+                            <div class="check-card-content">
+                                <span class="accent-label">Signature Pasta</span>
+                                <h3 class="highlight-item-title font-serif">Spaghetti Delle</h3>
+                                <div class="highlight-item-dots-decor"></div>
+                                <span class="highlight-item-price font-serif">$28.00</span>
+                                <p class="highlight-item-desc">Hand-rolled spaghetti pasta tossed with extra virgin olive oil, garlic, fresh basil, clams, and shrimp.</p>
+                            </div>
+                        </div>
+                        <!-- Card 6: Image -->
+                        <div class="menu-check-card img-card">
+                            <img src="assets/menu-item-4.jpg" alt="Seared Garlic Prawns" loading="lazy">
+                        </div>
+                        <!-- Card 7: Text -->
+                        <div class="menu-check-card text-card">
+                            <div class="check-card-content">
+                                <span class="accent-label">Wood-Fired Pizza</span>
+                                <h3 class="highlight-item-title font-serif">Neapolitan Pizza</h3>
+                                <div class="highlight-item-dots-decor"></div>
+                                <span class="highlight-item-price font-serif">$18.00</span>
+                                <p class="highlight-item-desc">48-hour fermented sourdough crust topped with organic San Marzano tomatoes, fresh mozzarella, and basil.</p>
+                            </div>
+                        </div>
+                        <!-- Card 8: Image -->
+                        <div class="menu-check-card img-card">
+                            <img src="assets/pizza-slice.jpg" alt="Spaghetti Marinara Pizza" loading="lazy">
+                        </div>
+                        <!-- Card 9: Text -->
+                        <div class="menu-check-card text-card">
+                            <div class="check-card-content">
+                                <span class="accent-label">Traditional</span>
+                                <h3 class="highlight-item-title font-serif">Baked Meatballs</h3>
+                                <div class="highlight-item-dots-decor"></div>
+                                <span class="highlight-item-price font-serif">$32.50</span>
+                                <p class="highlight-item-desc">Traditional beef and pork meatballs simmered in organic tomato marinara, finished with shaved cheese.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Parallax Image Section behind the overlapping menu grid -->
+                <div class="menu-bg-banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.7)), url('assets/prepare-dish-bg.jpg');">
+                    <div class="banner-overlay-content text-center">
+                        <a href="#menu" class="btn btn-primary nav-trigger" data-target="menu" id="home-view-all-menu-new">Explore Full Menu Collection</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Reviews (Testimonials) -->
+            <div class="section-container home-testimonials">
+                <div class="container-header text-center">
+                    <span class="accent-subtitle">Happy Customers!</span>
+                    <h2 class="section-heading">What Our Guests Say</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Aliquip habitant ea suscipit ea varius cras habitasse ligula doloremque cepteur vehicula iste nibh, mattis assumenda massa. The pasta is handmade and tastes absolutely fresh!"</p>
+                        <div class="testimonial-user">
+                            <img src="assets/testimonial-face-1.png" alt="Jose Hatts" class="user-avatar">
+                            <div class="user-details">
+                                <h4 class="user-name">Jose Hatts</h4>
+                                <span class="user-role">Food Critic</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Aliquip habitant ea suscipit ea varius cras habitasse ligula doloremque. The staff treated us like royalty during our family reunion in the Banquet Hall."</p>
+                        <div class="testimonial-user">
+                            <img src="assets/testimonial-face-2.png" alt="Monica Tata" class="user-avatar">
+                            <div class="user-details">
+                                <h4 class="user-name">Monica Tata</h4>
+                                <span class="user-role">Local Resident</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hours information is now cleanly integrated in the Welcome Visual Grid above -->
+        </section>
+        
+        <!-- ================= ABOUT US SECTION ================= -->
+        <section id="about" class="page-section">
+            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/about-header-bg.jpg');">
+                <h1 class="page-title text-white font-cursive">About Us.</h1>
+                <img src="assets/frill-divider.png" alt="Flourish Separator" class="header-flourish-divider">
+            </div>
+            
+            <!-- Realigned About Story & Asymmetric Image Grid Section -->
+            <div class="section-container about-story-split">
+                <div class="grid grid-2 align-items-center">
+                    <!-- Left: Asymmetric Image Collage Grid -->
+                    <div class="about-collage-grid">
+                        <div class="collage-col-stacked">
+                            <div class="collage-item img-small shadow-sm rounded-lg">
+                                <img src="assets/about-wine.jpg" alt="Italian Red Wine Pour">
+                            </div>
+                            <div class="collage-item img-small shadow-sm rounded-lg">
+                                <img src="assets/dining-hours.jpg" alt="Guests Toasting Drinks">
+                            </div>
+                        </div>
+                        <div class="collage-col-vertical">
+                            <div class="collage-item img-tall shadow-sm rounded-lg">
+                                <img src="assets/about-pasta-prep.jpg" alt="Chef Preparing Fresh Pasta">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Story Narrative & Description Section -->
+                    <div class="about-story-text">
+                        <img src="assets/parcelli.png" alt="Decor Leaf" class="about-text-leaf-icon">
+                        <h2 class="about-heading font-serif">Our Restaurant Is A Collective Of Amazing People Striving To Build Delightful Italian Cuisine</h2>
+                        <p class="about-desc-p">Lectus fringilla occaecat iste pretium fugiat convallis a, veniam conubia qui leo quod sodales! Nemo hendrerit laborum, error! Reiciendis, voluptas officiis, placerat ratione blanditiis! Habitasse dui proin cupidatat fringilla, ipsum dolor quidem, convallis nam, nulla quis optio, iure pellentesque sociosqu saepe explicabo similique placeat odit tempore tenetur litora, impedit sollicitudin mus deleniti, recusandae anim quo.</p>
+                        
+                        <p class="about-desc-dropcap">
+                            <span class="drop-cap-char text-orange font-serif">G</span>ustoso remains deeply rooted in Mediterranean cooking traditions. From hand-pressed organic olive oils to fresh pasta prepared hourly, our kitchen is a celebration of quality ingredients and heartfelt hospitality.
+                        </p>
+                        
+                        <!-- Signature -->
+                        <div class="founders-signature-wrap margin-top-md">
+                            <p class="signature-title font-bold text-dark text-uppercase letter-spacing-sm">Founder & Executive Chef</p>
+                            <p class="signature-text font-cursive text-orange">Marco Rossi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Artisans (Chef Profiles Grid) -->
+            <div class="section-container about-chefs-section bg-cream">
+                <div class="container-header text-center">
+                    <span class="accent-subtitle">The Masters</span>
+                    <h2 class="section-heading">Meet Our Artisans</h2>
+                    <img src="assets/frill-divider.png" alt="Divider Decor" class="divider-decor margin-center">
+                    <p class="section-subtext">The passionate hands crafting your gourmet dining experiences daily.</p>
+                </div>
+                
+                <div class="grid grid-3">
+                    <!-- Chef 1 -->
+                    <div class="chef-profile-card shadow-sm rounded-lg">
+                        <div class="chef-image-wrap">
+                            <img src="assets/chef-1.jpg" alt="Marco Rossi" class="chef-img">
+                        </div>
+                        <div class="chef-info text-center">
+                            <h3 class="chef-name text-dark font-serif">Marco Rossi</h3>
+                            <span class="chef-role text-orange text-uppercase font-bold">Executive Chef & Founder</span>
+                            <p class="chef-bio text-light">Bringing 30+ years of kitchen mastery and authentic family recipes from Tuscany.</p>
+                            <div class="chef-socials">
+                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chef 2 -->
+                    <div class="chef-profile-card shadow-sm rounded-lg">
+                        <div class="chef-image-wrap">
+                            <img src="assets/chef-2.jpg" alt="Francesca Bianchi" class="chef-img">
+                        </div>
+                        <div class="chef-info text-center">
+                            <h3 class="chef-name text-dark font-serif">Francesca Bianchi</h3>
+                            <span class="chef-role text-orange text-uppercase font-bold">Executive Pastry Chef</span>
+                            <p class="chef-bio text-light">A certified master of desserts, specialized in artisanal gelato and organic soufflés.</p>
+                            <div class="chef-socials">
+                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chef 3 -->
+                    <div class="chef-profile-card shadow-sm rounded-lg">
+                        <div class="chef-image-wrap">
+                            <img src="assets/chef-3.jpg" alt="Giovanni Cellini" class="chef-img">
+                        </div>
+                        <div class="chef-info text-center">
+                            <h3 class="chef-name text-dark font-serif">Giovanni Cellini</h3>
+                            <span class="chef-role text-orange text-uppercase font-bold">Culinary Sommelier</span>
+                            <p class="chef-bio text-light">Expertly pairing imported Italian vintages with our hearty Mediterranean pasta courses.</p>
+                            <div class="chef-socials">
+                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Amenities & Services -->
+            <div class="section-container about-amenities-section">
+                <div class="grid grid-2 align-items-center">
+                    <div class="amenities-text">
+                        <span class="accent-subtitle">Our Amenities</span>
+                        <h2 class="section-heading">Designed for Comfort & Celebration</h2>
+                        <p class="paragraph-lead text-dark margin-bottom-lg">Every details is crafted to ensure a cozy and memorable dining experience for you and your loved ones.</p>
+                        
+                        <div class="amenity-item-list">
+                            <div class="amenity-bullet">
+                                <div class="bullet-icon"><i class="fa-solid fa-wine-glass text-orange"></i></div>
+                                <div class="bullet-text">
+                                    <h4 class="font-serif text-dark">Private Wine Cellar</h4>
+                                    <p class="text-light">A separate cellar hosting over 150 labels of premium imported Italian wines.</p>
+                                </div>
+                            </div>
+                            <div class="amenity-bullet">
+                                <div class="bullet-icon"><i class="fa-solid fa-music text-orange"></i></div>
+                                <div class="bullet-text">
+                                    <h4 class="font-serif text-dark">Curated Live Music</h4>
+                                    <p class="text-light">Immersive, low-volume classical jazz nights every Thursday and Friday evening.</p>
+                                </div>
+                            </div>
+                            <div class="amenity-bullet">
+                                <div class="bullet-icon"><i class="fa-solid fa-cloud-sun text-orange"></i></div>
+                                <div class="bullet-text">
+                                    <h4 class="font-serif text-dark">Cozy Outdoor Patio</h4>
+                                    <p class="text-light">A covered, heated garden patio perfect for open-air lunch and candlelit dinner.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Call To Action Glassmorphic Card Overlay -->
+                    <div class="about-cta-panel rounded-lg shadow-md" style="background-image: linear-gradient(rgba(0,12,38,0.7), rgba(0,12,38,0.85)), url('assets/scanned-bg-4.jpg');">
+                        <div class="cta-panel-content text-center">
+                            <span class="accent-subtitle text-orange">Planning an Event?</span>
+                            <h3 class="panel-heading text-white font-serif margin-bottom-md">Host Your Special Moments at Gustoso</h3>
+                            <p class="panel-text text-cream margin-bottom-lg">From weddings and corporate dinners in our Banquet Hall to fully-catered parties, our team manages everything with premium care.</p>
+                            <div class="cta-buttons">
+                                <a href="#banquet" class="btn btn-primary nav-trigger" data-target="banquet" id="about-view-banquet-btn">View Banquet Facilities</a>
+                                <a href="#contact" class="btn btn-outline nav-trigger margin-top-sm" data-target="contact" id="about-inquire-btn">Inquire Online</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ================= MENU SECTION ================= -->
+        <section id="menu" class="page-section">
+            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/menu-header-bg.jpg');">
+                <h1 class="page-title text-white font-cursive">Menu.</h1>
+                <img src="assets/frill-divider.png" alt="Flourish Separator" class="header-flourish-divider">
+            </div>
+            
+            <div class="section-container">
+                <!-- Menu Kit Reminder Box -->
+                <div class="menu-kit-notifier" id="menu-kit-notice" style="display: none;">
+                    <div class="notifier-content">
+                        <i class="fa-solid fa-lightbulb text-orange"></i>
+                        <span>You have added items to your custom Menu Kit. <a href="#catering" class="nav-trigger" data-target="catering" id="notifier-catering-link">Go to Planner</a> to view prices.</span>
+                    </div>
+                    <button class="notifier-close" id="notifier-close-btn">&times;</button>
+                </div>
+                
+                <!-- Category Filter Controls -->
+                <div class="menu-filters" id="menu-filter-container">
+                    <button class="filter-btn active" data-category="all" id="filter-all">All Dishes</button>
+                    <button class="filter-btn" data-category="starters" id="filter-starters">Starters</button>
+                    <button class="filter-btn" data-category="mains" id="filter-mains">Main Courses</button>
+                    <button class="filter-btn" data-category="desserts" id="filter-desserts">Desserts</button>
+                    <button class="filter-btn" data-category="beverages" id="filter-beverages">Beverages</button>
+                </div>
+                
+                <!-- Menu Grid -->
+                <div class="menu-grid" id="menu-items-grid">
+                    <!-- Javascript will dynamically inject items -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- ================= BANQUET FACILITY SECTION ================= -->
+        <section id="banquet" class="page-section">
+            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/banquet-header-bg.jpg');">
+                <h1 class="page-title text-white font-cursive">Banquet.</h1>
+                <img src="assets/frill-divider.png" alt="Flourish Separator" class="header-flourish-divider">
+            </div>
+            
+            <div class="section-container">
+                <div class="grid grid-2 align-items-center margin-bottom-lg">
+                    <!-- Left: Description and Specifications -->
+                    <div class="banquet-text">
+                        <span class="accent-subtitle">Exquisite Venue</span>
+                        <h2 class="section-heading">Make Your Milestones Unforgettable</h2>
+                        <p class="banquet-desc-dropcap">
+                            <span class="drop-cap-char text-orange font-cursive">O</span>ur elegant dining hall offers a versatile backdrop for private celebrations, corporate dinners, or intimate weddings. We provide full-service event support, including customizable dining options, dedicated servers, custom floral decor, and complete table dressing.
+                        </p>
+                        <p class="banquet-desc-compact">
+                            The hall features gorgeous natural daylight during the day and warm candlelight ambient lighting during the evening, creating a premium atmosphere that will leave your guests in awe.
+                        </p>
+                        
+                        <div class="facility-specs margin-top-md">
+                            <h3 class="spec-heading font-serif">Venue Specifications:</h3>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-users text-orange"></i> <strong>Capacity:</strong> Up to 150 guests seated comfortably</li>
+                                <li><i class="fa-solid fa-sliders text-orange"></i> <strong>Configurations:</strong> Round tables, long banquet setups, or cocktail lounge</li>
+                                <li><i class="fa-solid fa-music text-orange"></i> <strong>Audio/Visual:</strong> Integrated sound system, wireless mic, and HD projection screen</li>
+                                <li><i class="fa-solid fa-door-open text-orange"></i> <strong>Amenities:</strong> Private guest entrance, private restrooms, and a dedicated bar</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Stacked Asymmetric Image Grid -->
+                    <div class="banquet-collage-grid">
+                        <div class="collage-col-tall">
+                            <img src="assets/banquet-room.jpg" alt="Banquet Hall Interior" class="banquet-img img-tall shadow-md">
+                        </div>
+                        <div class="collage-col-stacked">
+                            <img src="assets/gallery-event-1.jpg" alt="Banquet Centerpiece" class="banquet-img img-small shadow-sm">
+                            <img src="assets/gallery-event-2.jpg" alt="Wine toast at banquet" class="banquet-img img-small shadow-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curated Event Packages Section -->
+                <div class="banquet-packages-section margin-bottom-lg">
+                    <div class="container-header text-center">
+                        <span class="accent-subtitle">Curated Packages</span>
+                        <h2 class="section-heading">Designed for Every Occasion</h2>
+                    </div>
+                    <div class="grid grid-3">
+                        <div class="banquet-package-card shadow-sm">
+                            <div class="package-icon-wrap"><i class="fa-solid fa-ring text-orange"></i></div>
+                            <h3 class="package-name font-serif">Milestone Weddings</h3>
+                            <p class="package-desc text-light">Full venue dressing, multi-course plated dinner, premium champagne toast, custom tiered cake, and a dedicated bridal coordinator.</p>
+                        </div>
+                        <div class="banquet-package-card shadow-sm">
+                            <div class="package-icon-wrap"><i class="fa-solid fa-briefcase text-orange"></i></div>
+                            <h3 class="package-name font-serif">Corporate Galas</h3>
+                            <p class="package-desc text-light">State-of-the-art A/V projection setups, customized buffet lineups, podium microphone, corporate seating configurations, and high-speed Wi-Fi.</p>
+                        </div>
+                        <div class="banquet-package-card shadow-sm">
+                            <div class="package-icon-wrap"><i class="fa-solid fa-cake-candles text-orange"></i></div>
+                            <h3 class="package-name font-serif">Private Banquets</h3>
+                            <p class="package-desc text-light">Custom course pairings, candlelit dining setups, private bar lounge access, custom floral centerpieces, and customizable music stage setup.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Enquiry form inside Banquet -->
+            <div class="section-container bg-cream banquet-enquiry">
+                <div class="container-header text-center">
+                    <span class="accent-subtitle">Event Request</span>
+                    <h2 class="section-heading">Inquire About Banquet Booking</h2>
+                    <p class="section-subtext">Fill out the quick inquiry form below and our dedicated event coordinator will reach out to you within 24 hours.</p>
+                </div>
+                <div class="enquiry-form-container max-w-600 margin-center">
+                    <form id="banquet-inquiry-form" class="reservation-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="banq-name">Your Name</label>
+                                <input type="text" id="banq-name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="banq-email">Email Address</label>
+                                <input type="email" id="banq-email" required placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="banq-phone">Phone Number</label>
+                                <input type="tel" id="banq-phone" required placeholder="123-456-7890">
+                            </div>
+                            <div class="form-group">
+                                <label for="banq-guests">Estimated Guests</label>
+                                <input type="number" id="banq-guests" min="10" max="200" required placeholder="50">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="banq-date">Preferred Date</label>
+                                <input type="date" id="banq-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="banq-type">Event Type</label>
+                                <select id="banq-type">
+                                    <option value="corporate">Corporate Gathering</option>
+                                    <option value="wedding">Wedding Reception</option>
+                                    <option value="birthday">Birthday Celebration</option>
+                                    <option value="anniversary">Anniversary</option>
+                                    <option value="other">Private Dinner / Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="banq-notes">Additional Requests / Setup notes</label>
+                            <textarea id="banq-notes" rows="4" placeholder="Describe layout preferences, menu styles, or audio needs..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full" id="banquet-submit-btn">Send Event Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ================= GALLERY SECTION ================= -->
+        <section id="gallery" class="page-section">
+            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/gallery-header-bg.jpg');">
+                <h1 class="page-title text-white font-cursive">Gallery.</h1>
+                <img src="assets/frill-divider.png" alt="Flourish Separator" class="header-flourish-divider">
+            </div>
+            
+            <div class="section-container">
+                <!-- Gallery filters -->
+                <div class="menu-filters" id="gallery-filter-container">
+                    <button class="filter-btn active" data-gallery-cat="all" id="gal-all">All Photos</button>
+                    <button class="filter-btn" data-gallery-cat="dishes" id="gal-dishes">Dishes & Drinks</button>
+                    <button class="filter-btn" data-gallery-cat="atmosphere" id="gal-atmosphere">Atmosphere</button>
+                    <button class="filter-btn" data-gallery-cat="events" id="gal-events">Banquets & Events</button>
+                </div>
+                
+                <!-- Gallery Grid -->
+                <div class="gallery-grid" id="gallery-photo-grid">
+                    <!-- Javascript will load images dynamically -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- ================= CATERING SECTION ================= -->
+        <section id="catering" class="page-section">
+            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/catering-header-bg.jpg');">
+                <h1 class="page-title text-white font-cursive">Catering.</h1>
+                <img src="assets/frill-divider.png" alt="Flourish Separator" class="header-flourish-divider">
+            </div>
+            
+            <div class="section-container">
+                <div class="grid grid-2 margin-bottom-lg align-items-center">
+                    <div class="catering-info-text">
+                        <span class="accent-subtitle">Culinary Catering</span>
+                        <h2 class="section-heading">Professional Catering for All Venues</h2>
+                        <p class="paragraph-lead">Bring the exquisite taste of Gustoso directly to your office, estate, or celebration hall.</p>
+                        <p>We accommodate parties of all sizes, offering live pasta stations, plated fine dining courses, or elegant buffet packages. Our catering crew handles transport, setting up food warmers, table decoration, and service, allowing you to relax and enjoy the occasion.</p>
+                        <p class="text-orange font-bold">Try our interactive "Menu Kit Planner" below to create a custom menu package, estimate your pricing, and send the selected layout straight to our chefs!</p>
+                    </div>
+                    <div class="catering-graphic-box">
+                        <img src="assets/catering-cover.jpg" alt="Catering Buffet Setup" class="responsive-img rounded-lg shadow-md" style="width: 100%; height: 350px; object-fit: cover; border: 1px solid rgba(255, 119, 15, 0.22);">
+                    </div>
+                </div>
+                
+                <!-- MENU KIT PLANNER BOX -->
+                <div class="menu-kit-planner-card" id="catering-planner-app">
+                    <div class="planner-header">
+                        <div class="header-titles">
+                            <span class="badge badge-accent">Interactive Tool</span>
+                            <h3 class="planner-title font-serif">Menu Kit Quote Estimator</h3>
+                            <p class="planner-subtitle">Select dishes from the <strong>Menu Page</strong>, set your guest counts, and review estimated catering rates.</p>
+                        </div>
+                        <div class="planner-summary-stats">
+                            <div class="stat-box">
+                                <span class="stat-label">Items Selected</span>
+                                <span class="stat-value" id="kit-item-count">0</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-label">Estimated Total</span>
+                                <span class="stat-value text-orange" id="kit-estimated-total">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-2 planner-body">
+                        <!-- Selected list -->
+                        <div class="planner-list-side">
+                            <h4 class="side-title"><i class="fa-solid fa-list-check text-orange"></i> Your Selected Dishes</h4>
+                            <div class="selected-items-list" id="kit-items-container">
+                                <div class="empty-list-state">
+                                    <p>Your Menu Kit is currently empty.</p>
+                                    <a href="#menu" class="btn btn-outline btn-sm nav-trigger" data-target="menu" id="planner-add-items-btn">Add Items from Menu</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Guest count slider and submission -->
+                        <div class="planner-controls-side bg-cream">
+                            <h4 class="side-title"><i class="fa-solid fa-sliders text-orange"></i> Package Details</h4>
+                            <div class="form-group margin-bottom-md">
+                                <label for="guest-slider" class="slider-label">
+                                    <span>Estimated Guests:</span>
+                                    <strong id="guest-count-val">50</strong>
+                                </label>
+                                <input type="range" id="guest-slider" min="10" max="300" value="50" step="5" class="range-slider">
+                                <div class="slider-ticks">
+                                    <span>10 guests</span>
+                                    <span>150</span>
+                                    <span>300 guests</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group margin-bottom-md">
+                                <label for="catering-style">Service Presentation</label>
+                                <select id="catering-style">
+                                    <option value="buffet" data-multiplier="1.0">Standard Buffet Setup (Base rate)</option>
+                                    <option value="plated" data-multiplier="1.25">Formal Plated Multi-Course (+25% service charge)</option>
+                                    <option value="live" data-multiplier="1.35">Live Cooking Stations & Chefs (+35% service charge)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="price-breakdown-card">
+                                <div class="breakdown-row">
+                                    <span>Base menu per head:</span>
+                                    <strong id="per-head-base">$0.00</strong>
+                                </div>
+                                <div class="breakdown-row">
+                                    <span>Service multiplier:</span>
+                                    <strong id="service-factor">1.0x</strong>
+                                </div>
+                                <div class="breakdown-row total-row">
+                                    <span>Estimated Cost Per Head:</span>
+                                    <strong class="text-orange" id="per-head-total">$0.00</strong>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary w-full margin-top-md" id="catering-submit-kit-btn" disabled>Send Menu Kit to Catering Team</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ================= CONTACT US SECTION ================= -->
+        <section id="contact" class="page-section">
+            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/contact-header-bg.jpg');">
+                <h1 class="page-title text-white font-cursive">Contact Us.</h1>
+                <img src="assets/frill-divider.png" alt="Flourish Separator" class="header-flourish-divider">
+            </div>
+            
+            <!-- Contact Card Details & Map -->
+            <div class="section-container">
+                <div class="grid grid-2">
+                    <div class="contact-details">
+                        <span class="accent-subtitle">Information Desk</span>
+                        <h2 class="section-heading">Get in Touch Directly</h2>
+                        <p class="paragraph-lead">Have questions about table reservations, allergy concerns, or group bookings? Send us a line.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="contact-text">
+                                    <h4>Address</h4>
+                                    <p>13 Fifth Avenue, New York, NY 10003</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="contact-text">
+                                    <h4>Phone Reservations</h4>
+                                    <p>+1 123 456 7890 / +1 123 456 1010</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="contact-text">
+                                    <h4>Email Address</h4>
+                                    <p>reservations@gustoso-restaurant.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="map-canvas-wrapper">
+                            <iframe
+                                id="contact-map"
+                                src="https://maps.google.com/maps?q=13+Fifth+Avenue,+New+York,+NY+10003&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                                width="100%"
+                                height="300"
+                                style="border:0;"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Gustoso Restaurant Location"
+                            ></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-box bg-cream">
+                        <h3 class="side-title font-serif">Send Us A Message</h3>
+                        <form id="contact-message-form" class="reservation-form">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name</label>
+                                <input type="text" id="contact-name" required placeholder="Jane Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address</label>
+                                <input type="email" id="contact-email" required placeholder="jane@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Subject</label>
+                                <input type="text" id="contact-subject" required placeholder="General feedback, Catering questions">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message Body</label>
+                                <textarea id="contact-message" rows="5" required placeholder="Tell us how we can assist you..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full" id="contact-submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer bg-dark text-white">
+        <div class="footer-widgets section-container">
+            <div class="grid grid-4">
+                <div class="footer-widget-item">
+                    <h3 class="widget-title font-cursive">Gustoso</h3>
+                    <p class="widget-text">Bringing culinary tradition and family recipes to the table since 1978. Experience authentic dining at its absolute best.</p>
+                    <div class="footer-social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Yelp"><i class="fa-brands fa-yelp"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-widget-item">
+                    <h3 class="widget-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about" class="nav-trigger" data-target="about" id="footer-about-link">Our story</a></li>
+                        <li><a href="#menu" class="nav-trigger" data-target="menu" id="footer-menu-link">Menu collections</a></li>
+                        <li><a href="#banquet" class="nav-trigger" data-target="banquet" id="footer-banquet-link">Banquet facility</a></li>
+                        <li><a href="#catering" class="nav-trigger" data-target="catering" id="footer-catering-link">Catering services</a></li>
+                        <li><a href="#contact" class="nav-trigger" data-target="contact" id="footer-contact-link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-widget-item">
+                    <h3 class="widget-title">Get in Touch</h3>
+                    <p class="widget-text"><i class="fa-solid fa-phone text-orange"></i> +1 123 456 7890</p>
+                    <p class="widget-text"><i class="fa-solid fa-envelope text-orange"></i> info@gustoso-restaurant.com</p>
+                    <p class="widget-text"><i class="fa-solid fa-map-pin text-orange"></i> 13 Fifth Avenue, New York, NY</p>
+                </div>
+                <div class="footer-widget-item">
+                    <h3 class="widget-title">Our Hours</h3>
+                    <p class="widget-text">Monday – Saturday<br><strong>9:00 AM – 10:00 PM</strong></p>
+                    <p class="widget-text margin-top-sm">Sunday<br><strong>11:00 AM – 8:00 PM</strong></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Gustoso Restaurant. All Rights Reserved. Powered by Modern SPA Engine.</p>
+        </div>
+    </footer>
+
+    <!-- ================= MODALS & OVERLAYS ================= -->
+    
+    <!-- 1. TABLE BOOKING DIALOG MODAL -->
+    <div class="modal-wrapper" id="booking-modal-wrapper">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="modal-title font-serif">Online Booking</h3>
+                <button class="modal-close" id="close-booking-modal" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="booking-reservation-form" class="reservation-form">
+                    <div class="form-group">
+                        <label for="book-name">Full Name</label>
+                        <input type="text" id="book-name" required placeholder="Jane Doe">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="book-email">Email Address</label>
+                            <input type="email" id="book-email" required placeholder="jane@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="book-phone">Phone Number</label>
+                            <input type="tel" id="book-phone" required placeholder="123-456-7890">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="book-guests">Guests Count</label>
+                            <select id="book-guests">
+                                <option value="1">1 Person</option>
+                                <option value="2" selected>2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6">6 People</option>
+                                <option value="8">8 People</option>
+                                <option value="10">10+ People</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-date">Reservation Date</label>
+                            <input type="date" id="book-date" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="book-time">Arrival Time</label>
+                            <select id="book-time">
+                                <option value="11:30">11:30 AM (Lunch)</option>
+                                <option value="12:00">12:00 PM (Lunch)</option>
+                                <option value="13:00">1:00 PM (Lunch)</option>
+                                <option value="14:00">2:00 PM (Lunch)</option>
+                                <option value="17:30" selected>5:30 PM (Dinner)</option>
+                                <option value="18:00">6:00 PM (Dinner)</option>
+                                <option value="19:00">7:00 PM (Dinner)</option>
+                                <option value="20:00">8:00 PM (Dinner)</option>
+                                <option value="21:00">9:00 PM (Dinner)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-seating">Seating Preference</label>
+                            <select id="book-seating">
+                                <option value="no-preference">No Preference</option>
+                                <option value="window">Window View</option>
+                                <option value="indoor">Cozy Indoor Booth</option>
+                                <option value="patio">Open Air Patio</option>
+                                <option value="banquet">Banquet Hall Room</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="book-notes">Special Requests / Allergies / Notes</label>
+                        <textarea id="book-notes" rows="3" placeholder="Birthday candles, wheelchair access, etc."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full" id="booking-submit-btn">Confirm Reservation</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 2. SUCCESS FEEDBACK MODAL -->
+    <div class="modal-wrapper" id="success-modal-wrapper">
+        <div class="modal-card text-center success-card">
+            <div class="success-icon-container">
+                <i class="fa-solid fa-circle-check success-check-icon"></i>
+            </div>
+            <h3 class="modal-title font-serif margin-bottom-sm" id="success-title">Reservation Confirmed!</h3>
+            <div class="success-message" id="success-msg-content">
+                <!-- Form submission will write details here -->
+            </div>
+            <button class="btn btn-primary margin-top-md" id="close-success-modal">Close</button>
+        </div>
+    </div>
+    
+    <!-- 3. GALLERY LIGHTBOX MODAL -->
+    <div class="modal-wrapper lightbox-wrapper" id="gallery-lightbox">
+        <button class="lightbox-close" id="close-lightbox" aria-label="Close gallery lightbox">&times;</button>
+        <button class="lightbox-arrow arrow-left" id="lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>
+        
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightbox-target-img">
+            <p class="lightbox-caption" id="lightbox-target-caption"></p>
+        </div>
+        
+        <button class="lightbox-arrow arrow-right" id="lightbox-next" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="back-to-top-btn" aria-label="Scroll to top"><i class="fa-solid fa-angle-up"></i></button>
+
+    <!-- Main JavaScript Logic -->
+    <script src="app.js"></script>
+
+</body>
+</html>
