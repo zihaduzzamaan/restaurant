@@ -536,6 +536,9 @@ p {
     line-height: 1.1;
     margin-bottom: 0.5rem;
     font-weight: 400;
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.2s;
 }
 
 /* Giant serif page title line 2 */
@@ -549,6 +552,9 @@ p {
     margin-bottom: 1.25rem;
     text-transform: none; /* No forced uppercase */
     letter-spacing: -0.01em;
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.4s;
 }
 
 /* Clean subtitle line 3 */
@@ -561,11 +567,75 @@ p {
     color: rgba(255,255,255,0.9);
     margin-bottom: 3rem;
     text-transform: none;
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.6s;
 }
 
 .hero-buttons {
     display: flex;
     justify-content: center;
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.8s;
+}
+
+/* Elegant text link that replaces the blocky hero button */
+.hero-more-link {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-white);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    position: relative;
+    padding-bottom: 6px;
+    transition: var(--transition-medium);
+}
+
+.hero-more-link i {
+    font-size: 0.95rem;
+    transition: transform 0.3s ease;
+}
+
+.hero-more-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hero-more-link:hover {
+    color: var(--primary-accent);
+}
+
+.hero-more-link:hover i {
+    transform: translateX(4px);
+}
+
+.hero-more-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Smooth fade-in + slide-up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* --- Home Story & Dual Visual Cards Section --- */
