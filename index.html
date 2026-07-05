@@ -39,6 +39,11 @@
 
     <!-- Critical Inline Styles to prevent white page flash on load -->
     <style>
+        /* Prevent scrollbars while skeleton preloader is active */
+        html.loading, body.loading {
+            overflow: hidden !important;
+            height: 100% !important;
+        }
         /* Force body and preloader background dark instantly before style.css loads */
         html, body {
             background-color: #0b0f19 !important;
@@ -167,7 +172,7 @@
         }
     </style>
 </head>
-<body>
+<body class="loading">
 
     <!-- Initial Page Preloader to ensure all images load together before revealing -->
     <div id="page-preloader" class="page-preloader">
@@ -199,6 +204,7 @@
             window.addEventListener('load', function() {
                 var preloader = document.getElementById('page-preloader');
                 if (preloader) {
+                    document.body.classList.remove('loading');
                     preloader.className += ' fade-out';
                     setTimeout(function() {
                         preloader.style.display = 'none';
@@ -209,6 +215,7 @@
             setTimeout(function() {
                 var preloader = document.getElementById('page-preloader');
                 if (preloader && preloader.style.display !== 'none') {
+                    document.body.classList.remove('loading');
                     preloader.className += ' fade-out';
                     setTimeout(function() { preloader.style.display = 'none'; }, 500);
                 }
