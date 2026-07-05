@@ -67,6 +67,104 @@
             margin: 0 auto;
             padding: 0 1.5rem;
         }
+        .skeleton-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-grow: 1;
+            max-width: 500px;
+        }
+        .skeleton-shimmer {
+            background: linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.05) 25%,
+                rgba(255, 255, 255, 0.12) 37%,
+                rgba(255, 255, 255, 0.05) 63%
+            );
+            background-size: 400% 100%;
+            animation: skeletonShimmer 1.4s ease infinite;
+            border-radius: 4px;
+        }
+        .skeleton-flourish {
+            width: 130px;
+            height: 14px;
+            margin-bottom: 1.25rem;
+        }
+        .skeleton-title {
+            width: 280px;
+            height: 70px;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+        }
+        .skeleton-subtitle {
+            width: 190px;
+            height: 18px;
+            margin-bottom: 1.5rem;
+        }
+        .skeleton-tagline-row {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+            width: 100%;
+        }
+        .skeleton-line {
+            height: 1px;
+            flex-grow: 1;
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+        .skeleton-tagline-text {
+            width: 180px;
+            height: 16px;
+        }
+        .skeleton-cutlery {
+            width: 45px;
+            height: 300px;
+            border: 2px dashed rgba(255, 255, 255, 0.07);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            opacity: 0.85;
+        }
+        .skeleton-cutlery::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0.01) 0%,
+                rgba(255, 255, 255, 0.06) 50%,
+                rgba(255, 255, 255, 0.01) 100%
+            );
+            animation: skeletonCutleryPulse 1.8s ease-in-out infinite;
+        }
+        @keyframes skeletonShimmer {
+            0% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        @keyframes skeletonCutleryPulse {
+            0%, 100% {
+                opacity: 0.3;
+            }
+            50% {
+                opacity: 0.9;
+            }
+        }
+        @media (max-width: 921px) {
+            .skeleton-cutlery {
+                display: none !important;
+            }
+            .skeleton-center {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
