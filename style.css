@@ -519,103 +519,120 @@ p {
     overflow: hidden; /* Prevent floating elements from causing page scrollbars */
 }
 
-/* Decorative floating cutlery */
-.hero-cutlery {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    height: 70%;
-    max-height: 500px;
-    opacity: 0.2; /* Subtle background visual framing */
-    pointer-events: none;
-    z-index: 2;
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-    opacity: 0;
-    animation: fadeInUpCutlery 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-.hero-knife-decor {
-    left: 8%;
-    animation-delay: 0.7s;
-}
-
-.hero-fork-decor {
-    right: 8%;
-    animation-delay: 0.9s;
-}
-
-@keyframes fadeInUpCutlery {
-    from {
-        opacity: 0;
-        transform: translateY(-40%) rotate(-5deg);
-    }
-    to {
-        opacity: 0.22;
-        transform: translateY(-50%) rotate(0deg);
-    }
-}
-
-/* Content block in hero */
-.hero-content {
-    max-width: 800px;
+/* Decorative framing layout for hero contents */
+.hero-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    max-width: 960px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 1.5rem;
-    text-align: center;
     z-index: 5;
+    position: relative;
 }
 
-/* Cursive brand header line 1 */
-.hero-cursive-brand {
-    display: block;
-    font-family: var(--font-display-cursive);
-    font-size: 4rem;
-    color: var(--primary-accent);
-    line-height: 1.1;
+.hero-cutlery-side {
+    height: 320px;
+    width: auto;
+    opacity: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+    animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-fork-side-img {
+    animation-delay: 0.8s;
+}
+
+.hero-knife-side-img {
+    animation-delay: 1s;
+}
+
+.hero-center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Top decorative curl/divider flourish */
+.hero-top-flourish-wrap {
     margin-bottom: 0.5rem;
-    font-weight: 400;
     opacity: 0;
     animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    animation-delay: 0.2s;
+    animation-delay: 0.1s;
 }
 
-/* Giant serif page title line 2 */
-.hero-title {
+.hero-top-flourish-img {
+    width: 150px;
+    height: auto;
+    opacity: 0.85;
+    filter: brightness(0) invert(1); /* pure white */
+}
+
+/* Giant brand title (e.g. Fresco.) */
+.hero-brand-title {
     display: block;
-    font-family: var(--font-display-serif);
-    font-size: 5rem;
-    font-weight: 700;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 6.5rem;
+    font-weight: 400;
     color: var(--text-white);
-    line-height: 1.15;
-    margin-bottom: 1.25rem;
-    text-transform: none; /* No forced uppercase */
+    line-height: 1;
+    margin: 0.25rem 0 1.25rem 0;
     letter-spacing: -0.01em;
     opacity: 0;
     animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    animation-delay: 0.4s;
+    animation-delay: 0.3s;
 }
 
-/* Clean subtitle line 3 */
-.hero-subheading-tagline {
+/* Subtitle under brand (Italian Specialities) */
+.hero-specialities-subtitle {
     display: block;
     font-family: var(--font-body);
-    font-size: 1.45rem;
+    font-size: 1.35rem;
     font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1.5rem;
     letter-spacing: 0.05em;
-    color: rgba(255,255,255,0.9);
-    margin-bottom: 3rem;
-    text-transform: none;
     opacity: 0;
     animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    animation-delay: 0.6s;
+    animation-delay: 0.5s;
 }
 
-.hero-buttons {
+/* Tagline flex row with left/right lines */
+.hero-tagline-flex-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.7s;
+}
+
+.hero-tagline-side-line {
+    height: 1px;
+    width: 90px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.hero-tagline-text {
+    font-family: var(--font-body);
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-buttons-wrapper {
     display: flex;
     justify-content: center;
     opacity: 0;
     animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-    animation-delay: 0.8s;
+    animation-delay: 0.9s;
 }
 
 /* Elegant text link that replaces the blocky hero button */
@@ -2596,7 +2613,7 @@ p {
         padding-bottom: 3.5rem; /* Keep button padding consistent */
     }
     
-    .bg-leaves-left, .bg-leaves-right, .hero-cutlery {
+    .bg-leaves-left, .bg-leaves-right, .hero-cutlery-side {
         display: none !important;
     }
 }
@@ -2612,18 +2629,31 @@ p {
     }
     
     /* Hero typography adjustments to prevent overflow */
-    .hero-cursive-brand {
-        font-size: 3rem;
+    .hero-brand-title {
+        font-size: 4rem;
+        margin-bottom: 0.75rem;
     }
     
-    .hero-title {
-        font-size: 3.25rem;
-        line-height: 1.2;
-    }
-    
-    .hero-subheading-tagline {
+    .hero-specialities-subtitle {
         font-size: 1.15rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-top-flourish-img {
+        width: 100px;
+    }
+    
+    .hero-tagline-flex-wrap {
+        gap: 0.5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .hero-tagline-side-line {
+        width: 40px; /* shorter lines on mobile */
+    }
+    
+    .hero-tagline-text {
+        font-size: 0.95rem;
     }
     
     .hero-section {
@@ -2642,9 +2672,8 @@ p {
         width: 100%;
     }
     
-    .hero-buttons {
-        flex-direction: column;
-        gap: 0.75rem;
+    .hero-buttons-wrapper {
+        width: 100%;
     }
     
     .welcome-visual-grid {
