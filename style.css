@@ -516,6 +516,44 @@ p {
     justify-content: center;
     padding-top: 80px;
     position: relative;
+    overflow: hidden; /* Prevent floating elements from causing page scrollbars */
+}
+
+/* Decorative floating cutlery */
+.hero-cutlery {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    height: 70%;
+    max-height: 500px;
+    opacity: 0.2; /* Subtle background visual framing */
+    pointer-events: none;
+    z-index: 2;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    opacity: 0;
+    animation: fadeInUpCutlery 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-knife-decor {
+    left: 8%;
+    animation-delay: 0.7s;
+}
+
+.hero-fork-decor {
+    right: 8%;
+    animation-delay: 0.9s;
+}
+
+@keyframes fadeInUpCutlery {
+    from {
+        opacity: 0;
+        transform: translateY(-40%) rotate(-5deg);
+    }
+    to {
+        opacity: 0.22;
+        transform: translateY(-50%) rotate(0deg);
+    }
 }
 
 /* Content block in hero */
@@ -2558,8 +2596,8 @@ p {
         padding-bottom: 3.5rem; /* Keep button padding consistent */
     }
     
-    .bg-leaves-left, .bg-leaves-right {
-        display: none;
+    .bg-leaves-left, .bg-leaves-right, .hero-cutlery {
+        display: none !important;
     }
 }
 
