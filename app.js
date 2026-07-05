@@ -11,7 +11,7 @@ const MENU_DATABASE = [
         desc: "Traditional beef and pork meatballs simmered in rich marinara sauce, topped with shaved parmigiano, served with warm garlic focaccia.",
         category: "starters",
         tags: ["chef"],
-        img: "assets/menu-item-1.jpg"
+        img: "assets/menu-item-1.webp"
     },
     {
         id: "starter-2",
@@ -20,7 +20,7 @@ const MENU_DATABASE = [
         desc: "Toasted artisan sourdough topped with roasted cured ham, creamy melted fontina cheese, fresh arugula, and a drizzle of honey balsamic.",
         category: "starters",
         tags: ["new"],
-        img: "assets/menu-item-2.jpg"
+        img: "assets/menu-item-2.webp"
     },
     {
         id: "starter-3",
@@ -29,7 +29,7 @@ const MENU_DATABASE = [
         desc: "Vine-ripened heritage tomatoes layered with fresh buffalo mozzarella, garden basil leaves, extra virgin olive oil, and flaky sea salt.",
         category: "starters",
         tags: ["vegan"],
-        img: "assets/menu-item-3.jpg"
+        img: "assets/menu-item-3.webp"
     },
     {
         id: "starter-4",
@@ -38,7 +38,7 @@ const MENU_DATABASE = [
         desc: "Sautéed wild prawns tossed in white wine, butter, roasted garlic cloves, and fresh parsley, served with grilled baguettes.",
         category: "starters",
         tags: ["chef"],
-        img: "assets/menu-item-4.jpg"
+        img: "assets/menu-item-4.webp"
     },
     {
         id: "main-1",
@@ -47,7 +47,7 @@ const MENU_DATABASE = [
         desc: "Our house specialty. Hand-rolled spaghetti pasta tossed with extra virgin olive oil, fresh clams, wild shrimp, calamari, garlic, and cherry tomatoes.",
         category: "mains",
         tags: ["chef"],
-        img: "assets/pizza-slice.jpg" // Using beautiful pizza/pasta images
+        img: "assets/pizza-slice.webp" // Using beautiful pizza/pasta images
     },
     {
         id: "main-2",
@@ -56,7 +56,7 @@ const MENU_DATABASE = [
         desc: "Pan-seared organic chicken breast wrapped in thin prosciutto slices, cooked with fresh sage, white wine butter sauce, and sautéed spinach.",
         category: "mains",
         tags: ["new"],
-        img: "assets/deeplight-food-1.png"
+        img: "assets/deeplight-food-1.webp"
     },
     {
         id: "main-3",
@@ -65,7 +65,7 @@ const MENU_DATABASE = [
         desc: "Creamy arborio rice slow-simmered with organic wild porcini mushrooms, finished with a dash of white truffle oil and pecorino cheese.",
         category: "mains",
         tags: ["vegan"],
-        img: "assets/deeplight-food-2.png"
+        img: "assets/deeplight-food-2.webp"
     },
     {
         id: "main-4",
@@ -74,7 +74,7 @@ const MENU_DATABASE = [
         desc: "48-hour fermented sourdough crust topped with organic San Marzano tomato sauce, fresh mozzarella di bufala, basil, and olive oil.",
         category: "mains",
         tags: ["vegan", "chef"],
-        img: "assets/deeplight-food-3.png"
+        img: "assets/deeplight-food-3.webp"
     },
     {
         id: "main-5",
@@ -83,7 +83,7 @@ const MENU_DATABASE = [
         desc: "Fresh line-caught sea bass pan-seared and served over a bed of lemon-dill crushed potatoes, asparagus, and roasted caper butter sauce.",
         category: "mains",
         tags: [],
-        img: "assets/deeplight-food-4.png"
+        img: "assets/deeplight-food-4.webp"
     },
     {
         id: "dessert-1",
@@ -92,7 +92,7 @@ const MENU_DATABASE = [
         desc: "House-made ladyfingers soaked in organic espresso and dark rum, layered with rich whipped mascarpone cream and dusted with dark cocoa.",
         category: "desserts",
         tags: ["chef"],
-        img: "assets/deeplight-food-5.png"
+        img: "assets/deeplight-food-5.webp"
     },
     {
         id: "dessert-2",
@@ -101,7 +101,7 @@ const MENU_DATABASE = [
         desc: "Moist, zesty cake baked with Sicilian blood orange zest and extra virgin olive oil, served with vanilla bean mascarpone dollop.",
         category: "desserts",
         tags: ["new"],
-        img: "assets/deeplight-food-6.png"
+        img: "assets/deeplight-food-6.webp"
     },
     {
         id: "dessert-3",
@@ -110,7 +110,7 @@ const MENU_DATABASE = [
         desc: "Silky, chilled vanilla bean Italian cream custard topped with a sweet, fresh raspberry reduction and wild berries.",
         category: "desserts",
         tags: ["vegan"],
-        img: "assets/menu-item-1.jpg"
+        img: "assets/menu-item-1.webp"
     },
     {
         id: "bev-1",
@@ -119,7 +119,7 @@ const MENU_DATABASE = [
         desc: "A rich, classic Tuscan red wine with notes of dark cherries, leather, and spices. Perfect pairing for pastas.",
         category: "beverages",
         tags: [],
-        img: "assets/menu-item-2.jpg"
+        img: "assets/menu-item-2.webp"
     },
     {
         id: "bev-2",
@@ -128,7 +128,7 @@ const MENU_DATABASE = [
         desc: "Freshly squeezed lemon juice sweetened with house-infused garden basil simple syrup and topped with sparkling club soda.",
         category: "beverages",
         tags: ["vegan", "new"],
-        img: "assets/menu-item-3.jpg"
+        img: "assets/menu-item-3.webp"
     },
     {
         id: "bev-3",
@@ -137,24 +137,24 @@ const MENU_DATABASE = [
         desc: "Single shot of dark-roast Italian organic coffee beans, served with a lemon peel slice on the side.",
         category: "beverages",
         tags: [],
-        img: "assets/menu-item-4.jpg"
+        img: "assets/menu-item-4.webp"
     }
 ];
 
 // --- 2. Gallery Database ---
 const GALLERY_DATABASE = [
-    { src: "assets/gallery-atmosphere-1.jpg", category: "atmosphere", title: "Cozy Dining Room", desc: "Warm ambient candlelight dining experience" },
-    { src: "assets/gallery-dish-1.jpg", category: "dishes", title: "Hand-rolled Tagliatelle", desc: "Fresh handmade pasta with local organic tomatoes" },
-    { src: "assets/gallery-dish-2.jpg", category: "dishes", title: "Wood-Fired Pizza", desc: "Classic Margherita baked in stone ovens" },
-    { src: "assets/gallery-dish-3.jpg", category: "dishes", title: "Burrata Caprese Salad", desc: "Vine-ripened heritage tomatoes and sweet basil pesto" },
-    { src: "assets/gallery-atmosphere-2.jpg", category: "atmosphere", title: "Bistro Stone Oven", desc: "Our 48-hour fermented sourdough baking station" },
-    { src: "assets/gallery-atmosphere-3.jpg", category: "atmosphere", title: "Wine Cellar Showcase", desc: "Our curated selection of premium imports" },
-    { src: "assets/gallery-event-1.jpg", category: "events", title: "Banquet Centerpiece", desc: "Elegant floral setups for private weddings" },
-    { src: "assets/gallery-event-2.jpg", category: "events", title: "Grand Banquet Toast", desc: "Private group dinner toasts" },
-    { src: "assets/gallery-event-3.jpg", category: "events", title: "Buffet Catering Station", desc: "High-end corporate lunch catering presentations" },
-    { src: "assets/gallery-event-4.jpg", category: "events", title: "Garden Patio Reception", desc: "Elegant outdoor celebrations under bistro lights" },
-    { src: "assets/gallery-dish-4.jpg", category: "dishes", title: "Berry Panna Cotta", desc: "Chilled Italian cream custard with fresh reductions" },
-    { src: "assets/gallery-dish-5.jpg", category: "dishes", title: "Baked Beef Ribs", desc: "Traditional slow-cooked meats served hot" }
+    { src: "assets/gallery-atmosphere-1.webp", category: "atmosphere", title: "Cozy Dining Room", desc: "Warm ambient candlelight dining experience" },
+    { src: "assets/gallery-dish-1.webp", category: "dishes", title: "Hand-rolled Tagliatelle", desc: "Fresh handmade pasta with local organic tomatoes" },
+    { src: "assets/gallery-dish-2.webp", category: "dishes", title: "Wood-Fired Pizza", desc: "Classic Margherita baked in stone ovens" },
+    { src: "assets/gallery-dish-3.webp", category: "dishes", title: "Burrata Caprese Salad", desc: "Vine-ripened heritage tomatoes and sweet basil pesto" },
+    { src: "assets/gallery-atmosphere-2.webp", category: "atmosphere", title: "Bistro Stone Oven", desc: "Our 48-hour fermented sourdough baking station" },
+    { src: "assets/gallery-atmosphere-3.webp", category: "atmosphere", title: "Wine Cellar Showcase", desc: "Our curated selection of premium imports" },
+    { src: "assets/gallery-event-1.webp", category: "events", title: "Banquet Centerpiece", desc: "Elegant floral setups for private weddings" },
+    { src: "assets/gallery-event-2.webp", category: "events", title: "Grand Banquet Toast", desc: "Private group dinner toasts" },
+    { src: "assets/gallery-event-3.webp", category: "events", title: "Buffet Catering Station", desc: "High-end corporate lunch catering presentations" },
+    { src: "assets/gallery-event-4.webp", category: "events", title: "Garden Patio Reception", desc: "Elegant outdoor celebrations under bistro lights" },
+    { src: "assets/gallery-dish-4.webp", category: "dishes", title: "Berry Panna Cotta", desc: "Chilled Italian cream custard with fresh reductions" },
+    { src: "assets/gallery-dish-5.webp", category: "dishes", title: "Baked Beef Ribs", desc: "Traditional slow-cooked meats served hot" }
 ];
 
 // --- 3. App State Management ---
@@ -307,9 +307,9 @@ function initMenuRenderer() {
         if (category === "all" || category === "starters") {
             blocks.push({
                 title: "Starters & Platters",
-                image: "assets/menu-item-4.jpg",
-                bgImage: "assets/menu-item-1.jpg",
-                drawing: "assets/menu-draw-starters.png",
+                image: "assets/menu-item-4.webp",
+                bgImage: "assets/menu-item-1.webp",
+                drawing: "assets/menu-draw-starters.webp",
                 drawingClass: "draw-starters",
                 sectionClass: "sec-starters",
                 items: MENU_DATABASE.filter(item => item.category === "starters"),
@@ -320,9 +320,9 @@ function initMenuRenderer() {
         if (category === "all" || category === "mains") {
             blocks.push({
                 title: "Fresh Pastas & Risottos",
-                image: "assets/about-pasta-prep.jpg",
-                bgImage: "assets/menu-item-3.jpg",
-                drawing: "assets/menu-draw-pasta.png",
+                image: "assets/about-pasta-prep.webp",
+                bgImage: "assets/menu-item-3.webp",
+                drawing: "assets/menu-draw-pasta.webp",
                 drawingClass: "draw-pasta",
                 sectionClass: "sec-pasta",
                 items: MENU_DATABASE.filter(item => item.id.includes("main-1") || item.id.includes("main-3") || item.id.includes("main-5")),
@@ -330,9 +330,9 @@ function initMenuRenderer() {
             });
             blocks.push({
                 title: "Stone-Oven Pizzas & Mains",
-                image: "assets/pizza-pull.jpg",
-                bgImage: "assets/menu-item-2.jpg",
-                drawing: "assets/menu-draw-pizza.png",
+                image: "assets/pizza-pull.webp",
+                bgImage: "assets/menu-item-2.webp",
+                drawing: "assets/menu-draw-pizza.webp",
                 drawingClass: "draw-pizza",
                 sectionClass: "sec-pizza",
                 items: MENU_DATABASE.filter(item => item.id.includes("main-2") || item.id.includes("main-4")),
@@ -343,9 +343,9 @@ function initMenuRenderer() {
         if (category === "all" || category === "desserts") {
             blocks.push({
                 title: "Sweet Desserts",
-                image: "assets/deeplight-food-5.png",
-                bgImage: "assets/about-wine.jpg",
-                drawing: "assets/menu-draw-desserts.png",
+                image: "assets/deeplight-food-5.webp",
+                bgImage: "assets/about-wine.webp",
+                drawing: "assets/menu-draw-desserts.webp",
                 drawingClass: "draw-desserts",
                 sectionClass: "sec-desserts",
                 items: MENU_DATABASE.filter(item => item.category === "desserts"),
@@ -356,9 +356,9 @@ function initMenuRenderer() {
         if (category === "all" || category === "beverages") {
             blocks.push({
                 title: "Vintages & Beverages",
-                image: "assets/about-wine.jpg",
-                bgImage: "assets/dining-hours.jpg",
-                drawing: "assets/parcelli.png",
+                image: "assets/about-wine.webp",
+                bgImage: "assets/dining-hours.webp",
+                drawing: "assets/parcelli.webp",
                 drawingClass: "draw-beverages",
                 sectionClass: "sec-beverages",
                 items: MENU_DATABASE.filter(item => item.category === "beverages"),
@@ -404,7 +404,7 @@ function initMenuRenderer() {
                 
                 <div class="category-header text-center">
                     <h2 class="category-title font-cursive">${block.title}</h2>
-                    <img src="assets/frill-divider.png" alt="Flourish Separator" class="category-flourish-divider">
+                    <img src="assets/frill-divider.webp" alt="Flourish Separator" class="category-flourish-divider">
                 </div>
                 <div class="${gridClass}">
                     <!-- Left/Right: Double Layered Image Wrapper -->

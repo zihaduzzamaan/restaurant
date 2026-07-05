@@ -14,10 +14,16 @@
     <meta property="og:title" content="Gustoso | Italian Specialties, Good Food & Wine">
     <meta property="og:description" content="Experience authentic culinary mastery. Book your table online, plan custom catering with our Menu Kit, or host events in our banquet hall.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="assets/menu-item-1.jpg">
+    <meta property="og:image" content="assets/menu-item-1.webp">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/png" href="assets/favicon.webp">
+    
+    <!-- Image Preloads for Instant rendering of Above-the-Fold content -->
+    <link rel="preload" href="assets/hero-bg.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/fork.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/knife.webp" as="image" type="image/webp">
+    <link rel="preload" href="assets/frill-divider.webp" as="image" type="image/webp">
     
     <!-- Google Fonts: Berkshire Swash (Cursive headings), Playfair Display (Luxury serif), Raleway (Elegant body), Yesteryear (Handwriting accent) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,6 +38,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Initial Page Preloader to ensure all images load together before revealing -->
+    <div id="page-preloader" class="page-preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+    <script>
+        (function() {
+            window.addEventListener('load', function() {
+                var preloader = document.getElementById('page-preloader');
+                if (preloader) {
+                    preloader.className += ' fade-out';
+                    setTimeout(function() {
+                        preloader.style.display = 'none';
+                    }, 500);
+                }
+            });
+            // Safe fallback: force reveal page after 3.5s even if connection is very slow
+            setTimeout(function() {
+                var preloader = document.getElementById('page-preloader');
+                if (preloader && preloader.style.display !== 'none') {
+                    preloader.className += ' fade-out';
+                    setTimeout(function() { preloader.style.display = 'none'; }, 500);
+                }
+            }, 3500);
+        })();
+    </script>
 
     <!-- Main Navigation Header -->
     <header class="main-header" id="header">
@@ -87,16 +119,16 @@
         <!-- ================= HOME SECTION ================= -->
         <section id="home" class="page-section active">
             <!-- Hero banner Section with fixed background parallax -->
-            <div class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url('assets/hero-bg.jpg');">
+            <div class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url('assets/hero-bg.webp');">
                 
                 <div class="hero-content-wrapper">
                     <!-- Fork on the Left side of the text block -->
-                    <img src="assets/fork.png" alt="Decorative Fork" class="hero-cutlery-side hero-fork-side-img">
+                    <img src="assets/fork.webp" alt="Decorative Fork" class="hero-cutlery-side hero-fork-side-img">
 
                     <div class="hero-center-content">
                         <!-- Top decorative curl image -->
                         <div class="hero-top-flourish-wrap">
-                            <img src="assets/frill-divider.png" alt="Flourish Divider" class="hero-top-flourish-img">
+                            <img src="assets/frill-divider.webp" alt="Flourish Divider" class="hero-top-flourish-img">
                         </div>
                         
                         <h1 class="hero-brand-title font-cursive">Gustoso.</h1>
@@ -111,14 +143,14 @@
                     </div>
 
                     <!-- Knife on the Right side of the text block -->
-                    <img src="assets/knife.png" alt="Decorative Knife" class="hero-cutlery-side hero-knife-side-img">
+                    <img src="assets/knife.webp" alt="Decorative Knife" class="hero-cutlery-side hero-knife-side-img">
                 </div>
             </div>
 
             <!-- Realigned Welcome Story & Dual Visual Cards Section -->
             <div class="home-story-wrapper">
                 <!-- Faint Leaves background watermark -->
-                <img src="assets/parcelli.png" alt="Decor Leaf" class="welcome-bg-leaves">
+                <img src="assets/parcelli.webp" alt="Decor Leaf" class="welcome-bg-leaves">
                 
                 <div class="section-container home-story">
                     <div class="grid grid-2 align-items-center">
@@ -135,12 +167,12 @@
                         <div class="welcome-visual-grid">
                             <!-- Card 1: Pizza Pull -->
                             <div class="visual-card img-only-card shadow-md rounded-lg">
-                                <img src="assets/pizza-pull.jpg" alt="Chef Fresh Pizza Pull" class="visual-card-img">
+                                <img src="assets/pizza-pull.webp" alt="Chef Fresh Pizza Pull" class="visual-card-img">
                             </div>
                             
                             <!-- Card 2: Dining & Hours Overlay -->
                             <div class="visual-card hours-card shadow-md rounded-lg">
-                                <img src="assets/gallery-atmosphere-1.jpg" alt="Dining atmosphere" class="visual-card-img">
+                                <img src="assets/gallery-atmosphere-1.webp" alt="Dining atmosphere" class="visual-card-img">
                                 <div class="visual-hours-overlay text-center">
                                     <h4 class="hours-overlay-title font-cursive text-orange">Hours</h4>
                                     <p class="hours-overlay-days text-white font-bold">Monday – Saturday</p>
@@ -155,7 +187,7 @@
             </div>
 
             <!-- Parallax Middle Promo Banner -->
-            <div class="parallax-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('assets/prepare-dish-bg.jpg');">
+            <div class="parallax-section" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('assets/prepare-dish-bg.webp');">
                 <div class="parallax-content">
                     <span class="accent-subtitle text-orange">Wednesdays Means</span>
                     <h2 class="section-heading text-white">Happy Hours!</h2>
@@ -167,15 +199,15 @@
             <!-- HOME PAGE MENU HIGHLIGHTS (Quality Ingredients, Tasty Meals - Checkerboard Grid Layout) -->
             <div class="home-menu-highlights-wrapper">
                 <!-- Floating leaves vectors in background -->
-                <img src="assets/parcelli.png" alt="Decor Leaf" class="bg-leaves-left">
-                <img src="assets/parcelli.png" alt="Decor Leaf" class="bg-leaves-right">
+                <img src="assets/parcelli.webp" alt="Decor Leaf" class="bg-leaves-left">
+                <img src="assets/parcelli.webp" alt="Decor Leaf" class="bg-leaves-right">
                 
                 <div class="section-container home-menu-highlights">
                     <div class="container-header text-center">
-                        <img src="assets/parcelli.png" alt="Decor Leaf" class="menu-section-leaf-decor">
+                        <img src="assets/parcelli.webp" alt="Decor Leaf" class="menu-section-leaf-decor">
                         <span class="accent-subtitle">Our Menu</span>
                         <h2 class="section-heading">Quality Ingredients, Tasty Meals</h2>
-                        <img src="assets/frill-divider.png" alt="Divider Decor" class="divider-decor margin-center">
+                        <img src="assets/frill-divider.webp" alt="Divider Decor" class="divider-decor margin-center">
                         <p class="section-subtext">A few selected culinary masterpieces served fresh daily from our stone ovens.</p>
                     </div>
                     
@@ -192,7 +224,7 @@
                         </div>
                         <!-- Card 2: Image -->
                         <div class="menu-check-card img-card">
-                            <img src="assets/menu-item-2.jpg" alt="Ham and Fontina Appetizer" loading="lazy">
+                            <img src="assets/menu-item-2.webp" alt="Ham and Fontina Appetizer" loading="lazy">
                         </div>
                         <!-- Card 3: Text -->
                         <div class="menu-check-card text-card">
@@ -206,7 +238,7 @@
                         </div>
                         <!-- Card 4: Image -->
                         <div class="menu-check-card img-card">
-                            <img src="assets/menu-item-3.jpg" alt="Heritage Caprese Salad" loading="lazy">
+                            <img src="assets/menu-item-3.webp" alt="Heritage Caprese Salad" loading="lazy">
                         </div>
                         <!-- Card 5: Text -->
                         <div class="menu-check-card text-card">
@@ -220,7 +252,7 @@
                         </div>
                         <!-- Card 6: Image -->
                         <div class="menu-check-card img-card">
-                            <img src="assets/menu-item-4.jpg" alt="Seared Garlic Prawns" loading="lazy">
+                            <img src="assets/menu-item-4.webp" alt="Seared Garlic Prawns" loading="lazy">
                         </div>
                         <!-- Card 7: Text -->
                         <div class="menu-check-card text-card">
@@ -234,7 +266,7 @@
                         </div>
                         <!-- Card 8: Image -->
                         <div class="menu-check-card img-card">
-                            <img src="assets/pizza-slice.jpg" alt="Spaghetti Marinara Pizza" loading="lazy">
+                            <img src="assets/pizza-slice.webp" alt="Spaghetti Marinara Pizza" loading="lazy">
                         </div>
                         <!-- Card 9: Text -->
                         <div class="menu-check-card text-card">
@@ -250,7 +282,7 @@
                 </div>
                 
                 <!-- Parallax Image Section behind the overlapping menu grid -->
-                <div class="menu-bg-banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.7)), url('assets/prepare-dish-bg.jpg');">
+                <div class="menu-bg-banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.7)), url('assets/prepare-dish-bg.webp');">
                     <div class="banner-overlay-content text-center">
                         <a href="#menu" class="btn btn-primary nav-trigger" data-target="menu" id="home-view-all-menu-new">Explore Full Menu Collection</a>
                     </div>
@@ -274,7 +306,7 @@
                         </div>
                         <p class="testimonial-text">"Aliquip habitant ea suscipit ea varius cras habitasse ligula doloremque cepteur vehicula iste nibh, mattis assumenda massa. The pasta is handmade and tastes absolutely fresh!"</p>
                         <div class="testimonial-user">
-                            <img src="assets/testimonial-face-1.png" alt="Jose Hatts" class="user-avatar">
+                            <img src="assets/testimonial-face-1.webp" alt="Jose Hatts" class="user-avatar">
                             <div class="user-details">
                                 <h4 class="user-name">Jose Hatts</h4>
                                 <span class="user-role">Food Critic</span>
@@ -291,7 +323,7 @@
                         </div>
                         <p class="testimonial-text">"Aliquip habitant ea suscipit ea varius cras habitasse ligula doloremque. The staff treated us like royalty during our family reunion in the Banquet Hall."</p>
                         <div class="testimonial-user">
-                            <img src="assets/testimonial-face-2.png" alt="Monica Tata" class="user-avatar">
+                            <img src="assets/testimonial-face-2.webp" alt="Monica Tata" class="user-avatar">
                             <div class="user-details">
                                 <h4 class="user-name">Monica Tata</h4>
                                 <span class="user-role">Local Resident</span>
@@ -306,9 +338,9 @@
         
         <!-- ================= ABOUT US SECTION ================= -->
         <section id="about" class="page-section">
-            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/about-header-bg.jpg');">
+            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/about-header-bg.webp');">
                 <h1 class="page-title text-white font-cursive">About Us.</h1>
-                <img src="assets/frill-divider.png" alt="Flourish Separator" class="header-flourish-divider">
+                <img src="assets/frill-divider.webp" alt="Flourish Separator" class="header-flourish-divider">
             </div>
             
             <!-- Realigned About Story & Asymmetric Image Grid Section -->
@@ -318,22 +350,22 @@
                     <div class="about-collage-grid">
                         <div class="collage-col-stacked">
                             <div class="collage-item img-small shadow-sm rounded-lg">
-                                <img src="assets/about-wine.jpg" alt="Italian Red Wine Pour">
+                                <img src="assets/about-wine.webp" alt="Italian Red Wine Pour">
                             </div>
                             <div class="collage-item img-small shadow-sm rounded-lg">
-                                <img src="assets/dining-hours.jpg" alt="Guests Toasting Drinks">
+                                <img src="assets/dining-hours.webp" alt="Guests Toasting Drinks">
                             </div>
                         </div>
                         <div class="collage-col-vertical">
                             <div class="collage-item img-tall shadow-sm rounded-lg">
-                                <img src="assets/about-pasta-prep.jpg" alt="Chef Preparing Fresh Pasta">
+                                <img src="assets/about-pasta-prep.webp" alt="Chef Preparing Fresh Pasta">
                             </div>
                         </div>
                     </div>
                     
                     <!-- Right: Story Narrative & Description Section -->
                     <div class="about-story-text">
-                        <img src="assets/parcelli.png" alt="Decor Leaf" class="about-text-leaf-icon">
+                        <img src="assets/parcelli.webp" alt="Decor Leaf" class="about-text-leaf-icon">
                         <h2 class="about-heading font-serif">Our Restaurant Is A Collective Of Amazing People Striving To Build Delightful Italian Cuisine</h2>
                         <p class="about-desc-p">Lectus fringilla occaecat iste pretium fugiat convallis a, veniam conubia qui leo quod sodales! Nemo hendrerit laborum, error! Reiciendis, voluptas officiis, placerat ratione blanditiis! Habitasse dui proin cupidatat fringilla, ipsum dolor quidem, convallis nam, nulla quis optio, iure pellentesque sociosqu saepe explicabo similique placeat odit tempore tenetur litora, impedit sollicitudin mus deleniti, recusandae anim quo.</p>
                         
@@ -355,7 +387,7 @@
                 <div class="container-header text-center">
                     <span class="accent-subtitle">The Masters</span>
                     <h2 class="section-heading">Meet Our Artisans</h2>
-                    <img src="assets/frill-divider.png" alt="Divider Decor" class="divider-decor margin-center">
+                    <img src="assets/frill-divider.webp" alt="Divider Decor" class="divider-decor margin-center">
                     <p class="section-subtext">The passionate hands crafting your gourmet dining experiences daily.</p>
                 </div>
                 
@@ -363,7 +395,7 @@
                     <!-- Chef 1 -->
                     <div class="chef-profile-card shadow-sm rounded-lg">
                         <div class="chef-image-wrap">
-                            <img src="assets/chef-1.jpg" alt="Marco Rossi" class="chef-img">
+                            <img src="assets/chef-1.webp" alt="Marco Rossi" class="chef-img">
                         </div>
                         <div class="chef-info text-center">
                             <h3 class="chef-name text-dark font-serif">Marco Rossi</h3>
@@ -379,7 +411,7 @@
                     <!-- Chef 2 -->
                     <div class="chef-profile-card shadow-sm rounded-lg">
                         <div class="chef-image-wrap">
-                            <img src="assets/chef-2.jpg" alt="Francesca Bianchi" class="chef-img">
+                            <img src="assets/chef-2.webp" alt="Francesca Bianchi" class="chef-img">
                         </div>
                         <div class="chef-info text-center">
                             <h3 class="chef-name text-dark font-serif">Francesca Bianchi</h3>
@@ -395,7 +427,7 @@
                     <!-- Chef 3 -->
                     <div class="chef-profile-card shadow-sm rounded-lg">
                         <div class="chef-image-wrap">
-                            <img src="assets/chef-3.jpg" alt="Giovanni Cellini" class="chef-img">
+                            <img src="assets/chef-3.webp" alt="Giovanni Cellini" class="chef-img">
                         </div>
                         <div class="chef-info text-center">
                             <h3 class="chef-name text-dark font-serif">Giovanni Cellini</h3>
@@ -444,7 +476,7 @@
                     </div>
                     
                     <!-- Call To Action Glassmorphic Card Overlay -->
-                    <div class="about-cta-panel rounded-lg shadow-md" style="background-image: linear-gradient(rgba(0,12,38,0.7), rgba(0,12,38,0.85)), url('assets/scanned-bg-4.jpg');">
+                    <div class="about-cta-panel rounded-lg shadow-md" style="background-image: linear-gradient(rgba(0,12,38,0.7), rgba(0,12,38,0.85)), url('assets/scanned-bg-4.webp');">
                         <div class="cta-panel-content text-center">
                             <span class="accent-subtitle text-orange">Planning an Event?</span>
                             <h3 class="panel-heading text-white font-serif margin-bottom-md">Host Your Special Moments at Gustoso</h3>
@@ -461,9 +493,9 @@
         
         <!-- ================= MENU SECTION ================= -->
         <section id="menu" class="page-section">
-            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/menu-header-bg.jpg');">
+            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/menu-header-bg.webp');">
                 <h1 class="page-title text-white font-cursive">Menu.</h1>
-                <img src="assets/frill-divider.png" alt="Flourish Separator" class="header-flourish-divider">
+                <img src="assets/frill-divider.webp" alt="Flourish Separator" class="header-flourish-divider">
             </div>
             
             <div class="section-container">
@@ -494,9 +526,9 @@
         
         <!-- ================= BANQUET FACILITY SECTION ================= -->
         <section id="banquet" class="page-section">
-            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/banquet-header-bg.jpg');">
+            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/banquet-header-bg.webp');">
                 <h1 class="page-title text-white font-cursive">Banquet.</h1>
-                <img src="assets/frill-divider.png" alt="Flourish Separator" class="header-flourish-divider">
+                <img src="assets/frill-divider.webp" alt="Flourish Separator" class="header-flourish-divider">
             </div>
             
             <div class="section-container">
@@ -526,11 +558,11 @@
                     <!-- Right: Stacked Asymmetric Image Grid -->
                     <div class="banquet-collage-grid">
                         <div class="collage-col-tall">
-                            <img src="assets/banquet-room.jpg" alt="Banquet Hall Interior" class="banquet-img img-tall shadow-md">
+                            <img src="assets/banquet-room.webp" alt="Banquet Hall Interior" class="banquet-img img-tall shadow-md">
                         </div>
                         <div class="collage-col-stacked">
-                            <img src="assets/gallery-event-1.jpg" alt="Banquet Centerpiece" class="banquet-img img-small shadow-sm">
-                            <img src="assets/gallery-event-2.jpg" alt="Wine toast at banquet" class="banquet-img img-small shadow-sm">
+                            <img src="assets/gallery-event-1.webp" alt="Banquet Centerpiece" class="banquet-img img-small shadow-sm">
+                            <img src="assets/gallery-event-2.webp" alt="Wine toast at banquet" class="banquet-img img-small shadow-sm">
                         </div>
                     </div>
                 </div>
@@ -618,9 +650,9 @@
         
         <!-- ================= GALLERY SECTION ================= -->
         <section id="gallery" class="page-section">
-            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/gallery-header-bg.jpg');">
+            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/gallery-header-bg.webp');">
                 <h1 class="page-title text-white font-cursive">Gallery.</h1>
-                <img src="assets/frill-divider.png" alt="Flourish Separator" class="header-flourish-divider">
+                <img src="assets/frill-divider.webp" alt="Flourish Separator" class="header-flourish-divider">
             </div>
             
             <div class="section-container">
@@ -641,9 +673,9 @@
         
         <!-- ================= CATERING SECTION ================= -->
         <section id="catering" class="page-section">
-            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/catering-header-bg.jpg');">
+            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/catering-header-bg.webp');">
                 <h1 class="page-title text-white font-cursive">Catering.</h1>
-                <img src="assets/frill-divider.png" alt="Flourish Separator" class="header-flourish-divider">
+                <img src="assets/frill-divider.webp" alt="Flourish Separator" class="header-flourish-divider">
             </div>
             
             <div class="section-container">
@@ -656,7 +688,7 @@
                         <p class="text-orange font-bold">Try our interactive "Menu Kit Planner" below to create a custom menu package, estimate your pricing, and send the selected layout straight to our chefs!</p>
                     </div>
                     <div class="catering-graphic-box">
-                        <img src="assets/catering-cover.jpg" alt="Catering Buffet Setup" class="responsive-img rounded-lg shadow-md" style="width: 100%; height: 350px; object-fit: cover; border: 1px solid rgba(255, 119, 15, 0.22);">
+                        <img src="assets/catering-cover.webp" alt="Catering Buffet Setup" class="responsive-img rounded-lg shadow-md" style="width: 100%; height: 350px; object-fit: cover; border: 1px solid rgba(255, 119, 15, 0.22);">
                     </div>
                 </div>
                 
@@ -741,9 +773,9 @@
         
         <!-- ================= CONTACT US SECTION ================= -->
         <section id="contact" class="page-section">
-            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/contact-header-bg.jpg');">
+            <div class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('assets/contact-header-bg.webp');">
                 <h1 class="page-title text-white font-cursive">Contact Us.</h1>
-                <img src="assets/frill-divider.png" alt="Flourish Separator" class="header-flourish-divider">
+                <img src="assets/frill-divider.webp" alt="Flourish Separator" class="header-flourish-divider">
             </div>
             
             <!-- Contact Card Details & Map -->
