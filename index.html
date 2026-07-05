@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="loading">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -201,9 +201,13 @@
     </div>
     <script>
         (function() {
+            // Force viewport to top immediately on load trigger
+            window.scrollTo(0, 0);
+
             window.addEventListener('load', function() {
                 var preloader = document.getElementById('page-preloader');
                 if (preloader) {
+                    document.documentElement.classList.remove('loading');
                     document.body.classList.remove('loading');
                     preloader.className += ' fade-out';
                     setTimeout(function() {
@@ -215,6 +219,7 @@
             setTimeout(function() {
                 var preloader = document.getElementById('page-preloader');
                 if (preloader && preloader.style.display !== 'none') {
+                    document.documentElement.classList.remove('loading');
                     document.body.classList.remove('loading');
                     preloader.className += ' fade-out';
                     setTimeout(function() { preloader.style.display = 'none'; }, 500);
