@@ -2471,7 +2471,7 @@ p {
     
     .menu-checkerboard-grid {
         grid-template-columns: 1fr;
-        margin-bottom: -60px;
+        margin-bottom: 0; /* Reset margin-bottom override on mobile */
     }
     
     .menu-check-card {
@@ -2480,7 +2480,12 @@ p {
     }
     
     .menu-bg-banner {
-        padding: 100px 1.5rem 60px 1.5rem;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 75%; /* Set a slightly higher background height for mobile single-column grid */
+        padding-bottom: 3.5rem; /* Keep button padding consistent */
     }
     
     .bg-leaves-left, .bg-leaves-right {
