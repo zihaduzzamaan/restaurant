@@ -294,7 +294,7 @@ p {
 .header-container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 1.5rem 1.5rem;
+    padding: 0.9rem 1.5rem; /* Reduced height by decreasing vertical padding */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -302,7 +302,7 @@ p {
 }
 
 .main-header.scrolled .header-container {
-    padding: 0.6rem 1.5rem;
+    padding: 0.45rem 1.5rem;
 }
 
 /* Brand Text Logo & icon styling (No duplication) */
