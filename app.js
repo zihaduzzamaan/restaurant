@@ -92,7 +92,7 @@ const MENU_DATABASE = [
         desc: "House-made ladyfingers soaked in organic espresso and dark rum, layered with rich whipped mascarpone cream and dusted with dark cocoa.",
         category: "desserts",
         tags: ["chef"],
-        img: "assets/deeplight-food-5.webp"
+        img: "assets/sweet-dessert.png"
     },
     {
         id: "dessert-2",
@@ -101,7 +101,7 @@ const MENU_DATABASE = [
         desc: "Moist, zesty cake baked with Sicilian blood orange zest and extra virgin olive oil, served with vanilla bean mascarpone dollop.",
         category: "desserts",
         tags: ["new"],
-        img: "assets/deeplight-food-6.webp"
+        img: "assets/citrus-cake.png"
     },
     {
         id: "dessert-3",
@@ -313,43 +313,43 @@ function initMenuRenderer() {
                 drawingClass: "draw-starters",
                 sectionClass: "sec-starters",
                 items: MENU_DATABASE.filter(item => item.category === "starters"),
-                reverse: false
+                reverse: true
             });
         }
         
         if (category === "all" || category === "mains") {
             blocks.push({
                 title: "Fresh Pastas & Risottos",
-                image: "assets/about-pasta-prep.webp",
+                image: "assets/pasta-menu.jpg",
                 bgImage: "assets/menu-item-3.webp",
                 drawing: "assets/menu-draw-pasta.webp",
                 drawingClass: "draw-pasta",
                 sectionClass: "sec-pasta",
                 items: MENU_DATABASE.filter(item => item.id.includes("main-1") || item.id.includes("main-3") || item.id.includes("main-5")),
-                reverse: true
+                reverse: false
             });
             blocks.push({
                 title: "Stone-Oven Pizzas & Mains",
-                image: "assets/pizza-pull.webp",
+                image: "assets/pizza-menu.jpg",
                 bgImage: "assets/menu-item-2.webp",
                 drawing: "assets/menu-draw-pizza.webp",
                 drawingClass: "draw-pizza",
                 sectionClass: "sec-pizza",
                 items: MENU_DATABASE.filter(item => item.id.includes("main-2") || item.id.includes("main-4")),
-                reverse: false
+                reverse: true
             });
         }
         
         if (category === "all" || category === "desserts") {
             blocks.push({
                 title: "Sweet Desserts",
-                image: "assets/deeplight-food-5.webp",
-                bgImage: "assets/about-wine.webp",
+                image: "assets/sweet-dessert.png",
+                bgImage: "assets/citrus-cake.png",
                 drawing: "assets/menu-draw-desserts.webp",
                 drawingClass: "draw-desserts",
                 sectionClass: "sec-desserts",
                 items: MENU_DATABASE.filter(item => item.category === "desserts"),
-                reverse: category === "all" ? true : false
+                reverse: false
             });
         }
         
@@ -362,7 +362,7 @@ function initMenuRenderer() {
                 drawingClass: "draw-beverages",
                 sectionClass: "sec-beverages",
                 items: MENU_DATABASE.filter(item => item.category === "beverages"),
-                reverse: category === "all" ? false : false
+                reverse: true
             });
         }
 
@@ -399,23 +399,27 @@ function initMenuRenderer() {
             const gridClass = block.reverse ? "grid grid-2 align-items-center layout-reverse" : "grid grid-2 align-items-center";
             
             section.innerHTML = `
-                <!-- Background Drawing Watermark -->
-                <img src="${block.drawing}" class="category-bg-drawing ${block.drawingClass}" alt="">
-                
-                <div class="category-header text-center">
-                    <h2 class="category-title font-cursive">${block.title}</h2>
-                    <img src="assets/frill-divider.webp" alt="Flourish Separator" class="category-flourish-divider">
-                </div>
-                <div class="${gridClass}">
-                    <!-- Left/Right: Double Layered Image Wrapper -->
-                    <div class="menu-double-image-wrap">
-                        <img src="${block.image}" alt="${block.title}" class="img-foreground shadow-lg">
-                        <img src="${block.bgImage}" alt="" class="img-background">
-                    </div>
-                    
-                    <!-- Left/Right: Menu Items List -->
-                    <div class="menu-category-list-wrap">
-                        ${itemsHtml}
+                <div class="category-inner-container">
+                    <div class="${gridClass}">
+                        <!-- Left/Right: Double Layered Image Wrapper -->
+                        <div class="menu-double-image-wrap">
+                            <img src="${block.image}" alt="${block.title}" class="img-foreground shadow-lg">
+                            <img src="${block.bgImage}" alt="" class="img-background">
+                        </div>
+                        
+                        <!-- Left/Right: Menu Items List -->
+                        <div class="menu-category-list-wrap">
+                            <!-- Category Header inside the list column -->
+                            <div class="category-header">
+                                <h2 class="category-title font-cursive">${block.title}</h2>
+                                <img src="assets/divider-free-img.png" alt="Flourish Separator" class="category-flourish-divider">
+                            </div>
+                            
+                            <!-- Tomato shadow image inside the list column -->
+                            <img src="assets/section-bg.jpg" class="category-bg-drawing" alt="">
+                            
+                            ${itemsHtml}
+                        </div>
                     </div>
                 </div>
             `;

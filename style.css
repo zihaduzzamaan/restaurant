@@ -1436,17 +1436,23 @@ p {
     margin-bottom: 6rem;
     position: relative;
     overflow: hidden;
-    padding: 3rem 1.5rem;
+    padding: 5rem 0;
     transition: var(--transition-fast);
+    background-color: #ffffff;
 }
 
-/* Alternating background colors for sections */
-.menu-category-section.sec-pizza,
-.menu-category-section.sec-beverages {
+.category-inner-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Alternating background colors for sections (one-after-another pattern) */
+.menu-category-section.sec-pasta,
+.menu-category-section.sec-desserts {
     background-color: #fff8f5;
-    border-radius: var(--border-radius-lg);
-    box-shadow: inset 0 0 40px rgba(255, 119, 15, 0.02);
-    border: 1px solid rgba(255, 119, 15, 0.05);
+    border-top: 1px solid rgba(255, 119, 15, 0.04);
+    border-bottom: 1px solid rgba(255, 119, 15, 0.04);
 }
 
 .category-header {
@@ -1456,7 +1462,7 @@ p {
 }
 
 .category-title {
-    font-size: 2.85rem;
+    font-size: 2.25rem; /* Reduced size */
     color: var(--text-dark);
     margin: 0;
     font-family: var(--font-display-cursive);
@@ -1464,7 +1470,7 @@ p {
 }
 
 .category-flourish-divider {
-    width: 140px;
+    width: 250px;
     margin: 0.75rem auto 0 auto;
     display: block;
     opacity: 0.85;
@@ -1515,15 +1521,15 @@ p {
 .menu-double-image-wrap {
     position: relative;
     width: 100%;
-    height: 480px; /* Perfectly aligns height with menu list text block */
+    height: 540px; /* Perfectly aligns height with menu list text block */
     margin-bottom: 2rem;
     z-index: 3;
 }
 
 .menu-double-image-wrap .img-foreground {
     position: absolute;
-    width: 86%;
-    height: 86%;
+    width: 85%;
+    height: 95%; /* Longer foreground image */
     object-fit: cover;
     border-radius: 24px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.16);
@@ -1535,8 +1541,8 @@ p {
 
 .menu-double-image-wrap .img-background {
     position: absolute;
-    width: 86%;
-    height: 86%;
+    width: 70%; /* Smaller background image */
+    height: 80%; /* Smaller background image */
     object-fit: cover;
     border-radius: 24px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -1572,6 +1578,38 @@ p {
 
 .menu-category-list-wrap {
     padding: 0 1.5rem;
+    position: relative;
+}
+
+/* Category header styling inside the list container */
+.menu-category-list-wrap .category-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 3;
+}
+
+/* Tomato shadow image outline inside the list container */
+.menu-category-list-wrap .category-bg-drawing {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    opacity: 0.07;
+    pointer-events: none;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Desktop layout order swap for reversed sections */
+@media (min-width: 922px) {
+    .grid.layout-reverse > .menu-double-image-wrap {
+        order: 2;
+    }
+    .grid.layout-reverse > .menu-category-list-wrap {
+        order: 1;
+    }
 }
 
 .menu-item-row {
